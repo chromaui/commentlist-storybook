@@ -1,5 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {injectGlobal} from 'styled-components';
+
+injectGlobal`
+	@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,800');
+`;
 
 const CommentListDiv = styled.div`
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -55,7 +59,7 @@ font-weight: bold;
 `;
 const TextSpan = styled.span``;
 
-export default function CommentList({ loading, comments, totalCount }) {
+export default function CommentList({loading, comments, totalCount}) {
   if (loading) {
     return <div>empty</div>;
   }
@@ -66,7 +70,7 @@ export default function CommentList({ loading, comments, totalCount }) {
 
   return (
     <CommentListDiv>
-      {comments.map(({ text, author: { name, avatar } }) => (
+      {comments.map(({text, author: {name, avatar}}) => (
         <CommentItemDiv>
           <AvatarDiv><AvatarImg src={avatar} /></AvatarDiv>
           <MessageDiv>
