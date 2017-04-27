@@ -10,7 +10,7 @@ const CommentListDiv = styled.div`
   color: #333;
   display: inline-block;
   vertical-align: top;
-  width: 265px;
+  width: 275px;
 `;
 
 const CommentItemDiv = styled.div`
