@@ -4,18 +4,18 @@ import { storiesOf } from '@kadira/storybook';
 import CommentList from '../CommentList';
 
 storiesOf('CommentList', CommentList)
-  .add('rebel', () => (
-    <CommentList comments={rebelComments} totalCount={10} />
+  .add('rebels', () => (
+    <CommentList comments={rebelsComments} />
   ))
   .add('empire', () => (
-    <CommentList comments={empireComments} totalCount={10} />
+    <CommentList comments={empireComments} />
   ))
   .add('extras', () => (
-    <CommentList comments={extrasComments} totalCount={10} />
+    <CommentList comments={extrasComments} />
   ));
 
 
-const rebelComments = [
+const rebelsComments = [
   {
     text: 'Echo Three to Echo Seven. Han, old buddy, do you read me?',
     author: {
